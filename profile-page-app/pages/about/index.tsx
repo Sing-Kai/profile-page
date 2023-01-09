@@ -1,9 +1,8 @@
-import Header from "../src/components/Header";
+// import Header from "../../src/components/Header";
 
 const About = () => {
   return (
     <>
-      <Header/>
       <div>
           about me page
       </div>
