@@ -90,7 +90,7 @@ import { NavLink  } from 'react-router-dom';
 
 const NavBar = () => {
     return (
-      <ul>
+      <NavBarContainer>
         <li>
           <Link href='/'>
             Home
@@ -101,8 +101,13 @@ const NavBar = () => {
             About
           </Link>
         </li>
-      </ul>
+      </NavBarContainer>
     )
 }
+
+const NavBarContainer = styled.ul`
+  background: red;
+  color: white;
+`;
 
 export default NavBar
