@@ -1,0 +1,29 @@
+import React from "react";
+import styled from 'styled-components';
+
+const Footer = () => {
+  return (
+    <FooterContainer>
+        <FooterItem>
+            Footer Here, Check this is scrollable
+        </FooterItem>
+    </FooterContainer>
+  )
+}
+
+const FooterContainer = styled.div`
+  background: pink;
+  padding: 20px 10px 20px 10px;
+  display: block;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+`;
+
+const FooterItem = styled.div`
+  background: grey;
+  padding: 10px;
+  text-align: center;
+`;
+
+export default Footer;

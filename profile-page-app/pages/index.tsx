@@ -34,6 +34,7 @@ const PageContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin: 100px 100px 100px 100px;
+  max-height: 100vh;
 `;
 
 const PageItem = styled.div`
