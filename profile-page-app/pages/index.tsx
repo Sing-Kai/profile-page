@@ -52,6 +52,7 @@ const PageContainer = styled.div`
 
 const PageItems = styled.div`
   margin: 50px 10px 50px 10px;
+  position: relative;
 `;
 
 const PageItem = styled.div`
