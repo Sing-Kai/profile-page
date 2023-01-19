@@ -47,15 +47,4 @@ const Header = () => {
   )
 }
 
-// const NavbarLink = styled.nav`
-//   color: white;
-//   font-size: x-large;
-//   font-family: Arial, Helvetica, sans-serif;
-//   text-decoration: none;
-//   margin: 10px;
-//   @media (max-width: 700px) {
-//     display: none;
-//   }
-// `;
-
 export default Header;

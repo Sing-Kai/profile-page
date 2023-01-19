@@ -7,7 +7,7 @@ const NavBar = () => {
       <NavBarContainer>
         <NavBarItems>
           <TitleContainer>
-          Sing-Kai, check this sticks when scrolling
+          Sing-Kai
           </TitleContainer>
           <NavBarItem>
             <Link href='/'>
@@ -32,7 +32,7 @@ const NavBar = () => {
 }
 
 const NavBarContainer = styled.div`
-  background: pink;
+  background: ${props => props.theme.colors.neutral};
   padding: 10px;
 `;
 
@@ -42,6 +42,7 @@ const NavBarItems = styled.ul`
   padding: 10px;
   list-style-type: none;
   display: flex;
+  align-items: baseline;
 `;
 
 const NavBarItem = styled.li`
@@ -50,10 +51,10 @@ const NavBarItem = styled.li`
 `;
 
 const TitleContainer = styled.div`
-  background: red;
   padding: 5px;
   margin: 5px;
   margin-right: auto;
+  font-size: 30px;
 `;
 
 export default NavBar

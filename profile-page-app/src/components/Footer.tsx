@@ -12,7 +12,7 @@ const Footer = () => {
 }
 
 const FooterContainer = styled.div`
-  background: pink;
+  background: ${props => props.theme.colors.neutral};
   padding: 20px 10px 20px 10px;
   display: block;
   position: fixed;
@@ -21,7 +21,7 @@ const FooterContainer = styled.div`
 `;
 
 const FooterItem = styled.div`
-  background: grey;
+  background: ${props => props.theme.colors.neutral};
   padding: 10px;
   text-align: center;
 `;
