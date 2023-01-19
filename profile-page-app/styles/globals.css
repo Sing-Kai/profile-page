@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,7 @@
 body {
   max-width: 100vw;
   background:purple;
+  font-family: 'Montserrat';
 }
 
 a {
