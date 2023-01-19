@@ -1,11 +1,6 @@
 import Head from 'next/head'
 import styled from 'styled-components';
-import Image from 'next/image'
 import { Inter } from '@next/font/google'
-import styles from '../styles/Home.module.css'
-// import Layout from '../src/components/Layout'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
@@ -47,12 +42,14 @@ const PageContainer = styled.div`
   margin: auto;
   margin-top: 100px;
   width: 60%;
-  max-height: 100vh;
+  position: relative;
 `;
 
 const PageItems = styled.div`
   margin: 50px 10px 50px 10px;
   position: relative;
+  max-height: 100vh;
+
 `;
 
 const PageItem = styled.div`
