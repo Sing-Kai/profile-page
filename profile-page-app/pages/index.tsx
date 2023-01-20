@@ -50,7 +50,7 @@ const PageItems = styled.div`
 `;
 
 const PageItem = styled.div`
-  background:white;
+  background :${props => props.theme.colors.neutral};
   margin: 5px;
   padding: 5px;
 `;
