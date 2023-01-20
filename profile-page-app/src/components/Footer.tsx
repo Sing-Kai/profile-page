@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterContainer>
         <FooterItem>
-            Footer Here, Check this is scrollable
+              © {new Date().getFullYear()} - Sing-Kai Chiu
         </FooterItem>
     </FooterContainer>
   )
