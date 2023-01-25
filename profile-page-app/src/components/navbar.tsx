@@ -37,7 +37,7 @@ const NavBarContainer = styled.div`
 `;
 
 const NavBarItems = styled.ul`
-  background: ${props => props.theme.colors.carbon};;
+  background: ${props => props.theme.colors.carbon};
   color: white;
   padding: 10px;
   list-style-type: none;
