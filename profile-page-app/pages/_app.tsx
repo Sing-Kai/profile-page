@@ -5,26 +5,27 @@ import Footer from "../src/components/Footer"
 import {ThemeProvider} from 'styled-components'
 import {COLORS} from '../src/colours/colours'
 import styled from 'styled-components'
-import hero from '../src/images/hero.jpeg'
+import hero from '../src/images/pink.jpg'
 import Image from 'next/image'
+import Nav from "../src/components/Nav"
 
 const theme = {
   colors: COLORS,
-  img:hero
 }
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
-      <Header>
+      <Nav/>
+      {/* <Header>
         <ImageContainer>
-          {/* <Image src={hero} alt="Picture of the author" /> */}
+          <Image src={hero} alt="Picture of the author" />
         </ImageContainer>
         <TextContainer>
           <IntroText>Sing-Kai</IntroText>
           <IntroDesc>Some Description</IntroDesc>
         </TextContainer>
-      </Header>  
+      </Header>   */}
       {/* <BodyContainer>
         <NavBar/>
         <Component {...pageProps} />
@@ -38,16 +39,16 @@ const Header = styled.header`
   height: 80vh;
   background-image: linear-gradient(
     to right bottom, 
-    rgba(126, 213, 111, 0.8), 
-    rgba(40, 180, 131, 0.8));
+    rgba(126, 213, 111, 0.7), 
+    rgba(40, 180, 131, 0.9));
   background-size:cover;
   position: relative;
   clip-path:polygon(0 0, 100% 0, 100% 85%, 0 85% );
 `
 const ImageContainer = styled.div`
   opacity: 0.1;
+  width: 100%;
 `
-
 const TextContainer = styled.div`
   position: absolute;
   top: 40%;
