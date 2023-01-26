@@ -8,33 +8,34 @@ const Nav = () =>{
     <>
       <NavContainer className="nav">
         <NavItem>
-            <LinkItem href="" target = "_blank">
-              <FontAwesomeIcon icon={faHouse} size="2x"/>
-              <div className = "circle"></div>
-              <TitleContainer>
-                <div className = "title">Home</div>
-              </TitleContainer>
-            </LinkItem>
+          <LinkItem href="" target = "_blank">
+            <FontAwesomeIcon icon={faHouse} size="2x"/>
+            <div className = "circle"></div>
+          </LinkItem>
+          {/* <TitleAnimation className = "title">
+            <div className = "title">Home</div>
+          </TitleAnimation> */}
         </NavItem>
         
         <NavItem>
-            <LinkItem href="" target = "_blank">
+          <LinkItem href="" target = "_blank">
             <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
             <div className = "circle"></div>
-            <div className = "title">LinkedIn</div>
-            </LinkItem>
+
+          </LinkItem>
+          {/* <div className = "title">LinkedIn</div> */}
+
         </NavItem>
         
         <NavItem>
-            <LinkItem href="" target = "_blank">
-              <FontAwesomeIcon icon={faGithub} size="2x"/>  
-              <div className = "circle"></div>
-              <div className = "title">GitHub</div>
-            </LinkItem>
+          <LinkItem href="" target = "_blank">
+            <FontAwesomeIcon icon={faGithub} size="2x"/>  
+            <div className = "circle"></div>
+            {/* <div className = "title">GitHub</div> */}
+          </LinkItem>
         </NavItem>
         
         <div className="background"></div>
-
       </NavContainer>
     </>
   )
@@ -42,7 +43,7 @@ const Nav = () =>{
 
 const NavContainer = styled.ul`
   padding: 0px;
-  width: 640px;
+  width: 140px;
   margin: 100px auto auto auto;
   list-style-type: none;
 `
@@ -50,12 +51,13 @@ const NavContainer = styled.ul`
 const NavItem = styled.li`
   padding: 30px;
   float:left;
-  width: 100px;
+  width: 100%;
+  height: 50px;
   text-align:center;
   font-size:15px;
-  color:black;
+  color:pink;
   text-decoration:none;
-  background-color: black;
+  background-color: red;
 `
 const illuminate = keyframes`
   0% {
@@ -71,29 +73,18 @@ const illuminate = keyframes`
   }
 `
 
-const TitleContainer = styled.div`
-  font-size:0px;
-  color: red;
-  &:hover .title{
-    transform: translateY(-10px);
-    font-size: 15px;
-    transition: .5s;
-    /* color: #edf5e1; */
-    color: red;
-  }
-`
-
 const LinkItem = styled.a`
-  /* padding: 30px; */
   float:left;
   width: 100px;
   text-align:center;
-  font-size:15px;
+  /* font-size:15px; */
   color: #edf5e1;
+  color: black;
   text-decoration:none;
+  /* padding:0; */
   &:hover .circle {
-    margin-bottom: 0;
     position: relative;
+    margin: 0;
     z-index: 1;
     top: -60px;
     right: -10px;
@@ -103,12 +94,36 @@ const LinkItem = styled.a`
     animation: ${illuminate} 2s ease-out infinite;
     background: #edf5e1;
   }
+  /* &:hover .title{
+    transform: translateY(5px);
+    font-size: 15px;
+    transition: .5s;
+    color: #edf5e1;
+    padding: 0;
+  } */
+`
+
+const TitleAnimation = styled.div`
+  .title{
+    padding: 0px;
+    margin: 0;
+    font-size:10px;
+  }
+  &:hover .title{
+    transform: translateY(5px);
+    font-size: 150px;
+    transition: .5s;
+    color: #edf5e1;
+    color: black;
+    z-index: 1;
+  }
 `
 
 const IconContainer = styled.i`
+  padding: 0px;
   height: 5px;
   &:hover i {
-    transform: translateY(-5px);
+    transform: translateX(-5px);
   }
 `
 export default Nav
