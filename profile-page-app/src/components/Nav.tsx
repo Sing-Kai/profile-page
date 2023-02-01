@@ -3,61 +3,90 @@ import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
+import hero from '../../src/images/pink.jpg'
+import Image from 'next/image'
+
 const Nav = () =>{
   return (
-    <>
-      <NavContainer className="nav">
-        <NavItem>
-          <LinkItem href="" target = "_blank">
-            <FontAwesomeIcon icon={faHouse} size="2x"/>
-            <div className = "circle"></div>
-          </LinkItem>
-          {/* <TitleAnimation className = "title">
-            <div className = "title">Home</div>
-          </TitleAnimation> */}
-        </NavItem>
-        
-        <NavItem>
-          <LinkItem href="" target = "_blank">
-            <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
-            <div className = "circle"></div>
+    <NavImageContainer>
+      {/* <ImageContainer>
+        <Image src={hero} alt="Picture of the author" />
+      </ImageContainer> */}
+      <NavigationContainers>
+        <NavContainer className="nav">
+          <NavItem>
+            <LinkItem href="" target = "_blank">
+              <FontAwesomeIcon icon={faHouse} size="2x"/>
+              <div className = "circle"></div>
+              <span></span>
+            </LinkItem>
+          </NavItem>
+          
+          <NavItem>
+            <LinkItem href="" target = "_blank">
+              <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
+              <div className = "circle"></div>
+              <span></span>
+            </LinkItem>
+            {/* <div className = "title">LinkedIn</div> */}
 
-          </LinkItem>
-          {/* <div className = "title">LinkedIn</div> */}
-
-        </NavItem>
-        
-        <NavItem>
-          <LinkItem href="" target = "_blank">
-            <FontAwesomeIcon icon={faGithub} size="2x"/>  
-            <div className = "circle"></div>
-            {/* <div className = "title">GitHub</div> */}
-          </LinkItem>
-        </NavItem>
-        
-        <div className="background"></div>
-      </NavContainer>
-    </>
+          </NavItem>
+          
+          <NavItem>
+            <LinkItem href="" target = "_blank">
+              <FontAwesomeIcon icon={faGithub} size="2x"/>  
+              <div className = "circle"></div>
+              <span></span>
+              {/* <div className = "title">GitHub</div> */}
+            </LinkItem>
+          </NavItem>
+          {/* <div className="background"></div> */}
+        </NavContainer>
+      </NavigationContainers>
+    </NavImageContainer>
   )
 }
 
+const NavImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: right;
+`
+
+const NavigationContainers = styled.div`
+  /* display: flex;
+  flex-flow: column;
+  align-content: flex-end;
+  z-index: 1;
+  /* padding: 100px 0px; */
+  /* margin: auto;
+  background: red; */
+`
+
+const ImageContainer = styled.div`
+  opacity: 0.1;
+  width: 100%;
+  position: relative;
+  margin: auto;
+  z-index: -1;
+`
 const NavContainer = styled.ul`
   padding: 0px;
-  width: 140px;
-  margin: 100px auto auto auto;
+  width: 100px;
+  margin: 20px 20px auto auto;
   list-style-type: none;
+  z-index: 1000;
+  /* display: flex;
+  flex-flow: column;
+  align-content: flex-end; */
 `
 
 const NavItem = styled.li`
-  padding: 30px;
+  padding: 15px;
   float:left;
   width: 100%;
-  height: 50px;
-  text-align:center;
-  font-size:15px;
-  color:pink;
+  height: 30px;
   text-decoration:none;
-  background-color: red;
 `
 const illuminate = keyframes`
   0% {
@@ -77,11 +106,9 @@ const LinkItem = styled.a`
   float:left;
   width: 100px;
   text-align:center;
-  /* font-size:15px; */
   color: #edf5e1;
-  color: black;
+  color: white;
   text-decoration:none;
-  /* padding:0; */
   &:hover .circle {
     position: relative;
     margin: 0;
@@ -93,37 +120,6 @@ const LinkItem = styled.a`
     border-radius: 100%;
     animation: ${illuminate} 2s ease-out infinite;
     background: #edf5e1;
-  }
-  /* &:hover .title{
-    transform: translateY(5px);
-    font-size: 15px;
-    transition: .5s;
-    color: #edf5e1;
-    padding: 0;
-  } */
-`
-
-const TitleAnimation = styled.div`
-  .title{
-    padding: 0px;
-    margin: 0;
-    font-size:10px;
-  }
-  &:hover .title{
-    transform: translateY(5px);
-    font-size: 150px;
-    transition: .5s;
-    color: #edf5e1;
-    color: black;
-    z-index: 1;
-  }
-`
-
-const IconContainer = styled.i`
-  padding: 0px;
-  height: 5px;
-  &:hover i {
-    transform: translateX(-5px);
   }
 `
 export default Nav
