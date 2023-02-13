@@ -9,10 +9,7 @@ import Image from 'next/image'
 const Nav = () =>{
   return (
     <NavImageContainer>
-      {/* <ImageContainer>
-        <Image src={hero} alt="Picture of the author" />
-      </ImageContainer> */}
-      <NavigationContainers>
+      <div>
         <NavContainer className="nav">
           <NavItem>
             <LinkItem href="" target = "_blank">
@@ -42,7 +39,10 @@ const Nav = () =>{
           </NavItem>
           {/* <div className="background"></div> */}
         </NavContainer>
-      </NavigationContainers>
+      </div>
+      <ImageContainer>
+        <Image src={hero} alt="Picture of the author" />
+      </ImageContainer>
     </NavImageContainer>
   )
 }
@@ -53,20 +53,20 @@ const NavImageContainer = styled.div`
   justify-content: right;
 `
 
-const NavigationContainers = styled.div`
-  /* display: flex;
-  flex-flow: column;
-  align-content: flex-end;
-  z-index: 1;
-  /* padding: 100px 0px; */
-  /* margin: auto;
-  background: red; */
-`
+// const NavigationContainers = styled.div`
+//   /* display: flex;
+//   flex-flow: column;
+//   align-content: flex-end;
+//   z-index: 1;
+//   /* padding: 100px 0px; */
+//   /* margin: auto;
+//   background: red; */
+// `
 
 const ImageContainer = styled.div`
   opacity: 0.1;
   width: 100%;
-  position: relative;
+  position: absolute;
   margin: auto;
   z-index: -1;
 `
@@ -87,6 +87,7 @@ const NavItem = styled.li`
   width: 100%;
   height: 30px;
   text-decoration:none;
+  z-index: 1;
 `
 const illuminate = keyframes`
   0% {
