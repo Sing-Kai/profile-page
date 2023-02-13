@@ -11,6 +11,7 @@ const Nav = () =>{
     <NavImageContainer>
       <div>
         <NavContainer className="nav">
+          
           <NavItem>
             <LinkItem href="" target = "_blank">
               <FontAwesomeIcon icon={faHouse} size="2x"/>
@@ -25,8 +26,6 @@ const Nav = () =>{
               <div className = "circle"></div>
               <span></span>
             </LinkItem>
-            {/* <div className = "title">LinkedIn</div> */}
-
           </NavItem>
           
           <NavItem>
@@ -34,10 +33,9 @@ const Nav = () =>{
               <FontAwesomeIcon icon={faGithub} size="2x"/>  
               <div className = "circle"></div>
               <span></span>
-              {/* <div className = "title">GitHub</div> */}
             </LinkItem>
           </NavItem>
-          {/* <div className="background"></div> */}
+
         </NavContainer>
       </div>
       <ImageContainer>
