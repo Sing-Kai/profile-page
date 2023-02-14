@@ -11,7 +11,7 @@ const Nav = () =>{
     <NavImageContainer>
       <div>
         <NavContainer className="nav">
-          
+
           <NavItem>
             <LinkItem href="" target = "_blank">
               <FontAwesomeIcon icon={faHouse} size="2x"/>
@@ -39,7 +39,7 @@ const Nav = () =>{
         </NavContainer>
       </div>
       <ImageContainer>
-        <Image src={hero} alt="Picture of the author" />
+        <Image src={hero} alt="background-image"  width={250} height={300}/>
       </ImageContainer>
     </NavImageContainer>
   )
