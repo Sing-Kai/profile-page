@@ -3,8 +3,6 @@ import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
-import blanket from '../../src/images/pink.jpg'
-import Image from 'next/image'
 
 const Nav = () =>{
   return (
@@ -39,7 +37,7 @@ const Nav = () =>{
         </NavContainer>
       </div>
       {/* <ImageContainer>
-        <Image src={blanket} alt="background-image" width={2800} height={1990}/>
+        <Image src={blanket} alt="background-image" width={720} height={470}/>
       </ImageContainer> */}
     </NavImageContainer>
   )
@@ -51,13 +49,20 @@ const NavImageContainer = styled.div`
   justify-content: right;
 `
 
-const ImageContainer = styled.div`
-  opacity: 0.1;
-  width: 100%;
-  position: absolute;
-  margin: auto;
-  z-index: -1;
-`
+// const ImageContainer = styled.div`
+//   opacity: 0.1;
+//   width: 100%;
+//   position: absolute;
+//   margin: auto;
+//   z-index: -1;
+
+//   display: block;
+//   margin-left: auto;
+//   margin-right: auto;
+//   margin-top: 50%;
+//   width: 50%;
+// `
+
 const NavContainer = styled.ul`
   padding: 0px;
   width: 100px;
