@@ -5,7 +5,8 @@ import {COLORS} from '../src/colours/colours'
 import styled from 'styled-components'
 import Nav from "../src/components/Nav"
 import Footer from "../src/components/Footer"
-import profile from '../src/images/profile-pic.jpg';
+import profile from '../src/images/profileGreyLight.jpg';
+// import profile from '../src/images/profile-pic.jpg';
 import Image from 'next/image'
 import BackImage from '../src/components/BackImage'
 
@@ -17,12 +18,11 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider theme={theme}>
       <Header>
-        {/* <BackImage/> */}
+        <BackImage/>
         <Nav/>
         <ProfileTextCard>
-          {/* <BackImage/> */}
           <ProfilePicContainer>
-              <Image src={profile} alt="Picture of the author" width={250} height={250} ></Image>
+              <Image src={profile} alt="Picture of the author" width={250} height={240} ></Image>
           </ProfilePicContainer>
           <TextContainer>
             <IntroText>Sing-Kai</IntroText>

@@ -7,10 +7,8 @@ const BackImage = () => {
   return(
     <ImageContainer>
       <Image src={blanket} alt="background-image"
-        // fill
-        sizes="(max-width: 768px) 100vw,
-        (max-width: 1200px) 50vw,
-        33vw"
+        fill
+        style={{objectFit: 'cover' }}
         />
     </ImageContainer>
   )
@@ -19,12 +17,10 @@ const BackImage = () => {
 const ImageContainer = styled.div`
   opacity: 0.1;
   position: absolute;
-  margin: auto;
-  z-index: 100;
-  display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-  background: red;
+  z-index: -1;
+  background-size: auto;
+  width: 100vw;
+  height: 100vh;
 `
 
 export default BackImage

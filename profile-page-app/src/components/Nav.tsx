@@ -36,9 +36,6 @@ const Nav = () =>{
 
         </NavContainer>
       </div>
-      {/* <ImageContainer>
-        <Image src={blanket} alt="background-image" width={720} height={470}/>
-      </ImageContainer> */}
     </NavImageContainer>
   )
 }
@@ -49,24 +46,10 @@ const NavImageContainer = styled.div`
   justify-content: right;
 `
 
-// const ImageContainer = styled.div`
-//   opacity: 0.1;
-//   width: 100%;
-//   position: absolute;
-//   margin: auto;
-//   z-index: -1;
-
-//   display: block;
-//   margin-left: auto;
-//   margin-right: auto;
-//   margin-top: 50%;
-//   width: 50%;
-// `
-
 const NavContainer = styled.ul`
   padding: 0px;
   width: 100px;
-  margin: 20px 20px auto auto;
+  margin: 10px 10px auto auto;
   list-style-type: none;
   z-index: 1000;
 `
