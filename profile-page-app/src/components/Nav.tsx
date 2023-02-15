@@ -38,9 +38,9 @@ const Nav = () =>{
 
         </NavContainer>
       </div>
-      <ImageContainer>
-        <Image src={blanket} alt="background-image" />
-      </ImageContainer>
+      {/* <ImageContainer>
+        <Image src={blanket} alt="background-image" width={2800} height={1990}/>
+      </ImageContainer> */}
     </NavImageContainer>
   )
 }

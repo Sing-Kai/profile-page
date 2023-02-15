@@ -12,12 +12,12 @@ const Footer = () => {
 }
 
 const FooterContainer = styled.div`
-  background: ${props => props.theme.colors.neutral};
+  /* background: ${props => props.theme.colors.neutral}; */
   display: flex;
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 10vh;
+  height: 4vh;
   justify-content: center;
   align-items: center;
 `;
