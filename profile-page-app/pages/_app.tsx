@@ -33,14 +33,14 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 const Header = styled.div`
-  height: 100vh;
+  height: 80vh;
   background-image: linear-gradient(
     to right bottom, 
     rgba(126, 213, 111, 0.7), 
     rgba(40, 180, 131, 0.9));
   background-size:cover;
   position: relative;
-  clip-path:polygon(0 0, 100% 0, 100% 85%, 0 85% );
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
 `
 
 const ProfileTextCard = styled.div`
@@ -51,7 +51,6 @@ const ProfileTextCard = styled.div`
   margin: 5px;
   margin-top: 10%;
 `
-
 const ProfilePicContainer = styled.div`
   padding: 5px;
   margin: 5px;
@@ -62,7 +61,6 @@ const TextContainer = styled.div`
   margin: 5px;
   width: 50%;
 `
-
 
 const IntroText = styled.span`
   text-transform: uppercase;

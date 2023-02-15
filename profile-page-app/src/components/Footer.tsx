@@ -16,9 +16,10 @@ const FooterContainer = styled.div`
   background: red;
   /* padding: 20px 10px 20px 10px; */
   display: block;
-  /* position: fixed; */
+  position: relative;
   bottom: 0;
   width: 100%;
+  height: auto;
   border-top: purple;
   border-width: 1px;
 `;

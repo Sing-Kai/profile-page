@@ -3,7 +3,8 @@ import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
-import hero from '../../src/images/pink.jpg'
+// import blanket from '../../src/images/blanket.jpg'
+import blanket from '../../src/images/pink.jpg'
 import Image from 'next/image'
 
 const Nav = () =>{
@@ -39,7 +40,7 @@ const Nav = () =>{
         </NavContainer>
       </div>
       <ImageContainer>
-        <Image src={hero} alt="background-image"  width={250} height={300}/>
+        <Image src={blanket} alt="background-image" />
       </ImageContainer>
     </NavImageContainer>
   )
@@ -51,20 +52,10 @@ const NavImageContainer = styled.div`
   justify-content: right;
 `
 
-// const NavigationContainers = styled.div`
-//   /* display: flex;
-//   flex-flow: column;
-//   align-content: flex-end;
-//   z-index: 1;
-//   /* padding: 100px 0px; */
-//   /* margin: auto;
-//   background: red; */
-// `
-
 const ImageContainer = styled.div`
   opacity: 0.1;
   width: 100%;
-  position: absolute;
+  position: fixed;
   margin: auto;
   z-index: -1;
 `
@@ -74,9 +65,6 @@ const NavContainer = styled.ul`
   margin: 20px 20px auto auto;
   list-style-type: none;
   z-index: 1000;
-  /* display: flex;
-  flex-flow: column;
-  align-content: flex-end; */
 `
 
 const NavItem = styled.li`
