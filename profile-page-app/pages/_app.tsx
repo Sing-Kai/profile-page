@@ -39,8 +39,8 @@ const Header = styled.div`
   height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
-    rgba(126, 213, 111, 0.7), 
-    rgba(40, 180, 131, 0.9));
+    rgba(126, 213, 111, 0.8), 
+    rgba(40, 180, 131, 1.0));
   background-size:cover;
   position: relative;
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
