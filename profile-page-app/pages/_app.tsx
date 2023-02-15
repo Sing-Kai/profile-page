@@ -33,7 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
 }
 
 const Header = styled.div`
-  height: 80vh;
+  height: 90vh;
   background-image: linear-gradient(
     to right bottom, 
     rgba(126, 213, 111, 0.7), 

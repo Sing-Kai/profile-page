@@ -3,7 +3,6 @@ import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHouse} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
-// import blanket from '../../src/images/blanket.jpg'
 import blanket from '../../src/images/pink.jpg'
 import Image from 'next/image'
 
@@ -55,7 +54,7 @@ const NavImageContainer = styled.div`
 const ImageContainer = styled.div`
   opacity: 0.1;
   width: 100%;
-  position: fixed;
+  position: absolute;
   margin: auto;
   z-index: -1;
 `
