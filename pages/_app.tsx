@@ -5,7 +5,6 @@ import {COLORS} from '../src/colours/colours'
 import styled from 'styled-components'
 import Nav from "../src/components/Nav"
 import Footer from "../src/components/Footer"
-// import profile from '../src/images/profileGreyLight.jpg';
 import profile from '../src/images/profile-pic.jpg';
 import Image from 'next/image'
 import BackImage from '../src/components/BackImage'
