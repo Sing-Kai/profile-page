@@ -73,6 +73,7 @@ const IntroText = styled.span`
   font-size: 50px;
   font-weight: 800;
   letter-spacing: 15px;
+/* font-family: 'Dala Floda Roman No 2'; */
 `
 const IntroDesc = styled.span`
   color: white;
