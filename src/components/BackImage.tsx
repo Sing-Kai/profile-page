@@ -23,4 +23,5 @@ const ImageContainer = styled.div`
   height: 100vh;
 `
 
+
 export default BackImage
