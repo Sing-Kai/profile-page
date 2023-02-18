@@ -7,17 +7,5 @@ export const navLinks = [
     {
       name: "About Me",
       path: "/about",
-    },
-    // {
-    //   name: "Blog",
-    //   path: "/blog",
-    // },
-    // {
-    //   name: "Projects",
-    //   path: "/projects",
-    // },
-    // {
-    //   name: <NavItem item="Contact Me" />,
-    //   path: "#contact",
-    // },
+    }
   ];
