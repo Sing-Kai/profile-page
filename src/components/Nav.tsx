@@ -10,16 +10,16 @@ const Nav = () =>{
       <div>
         <NavContainer className="nav">
 
-          <NavItem>
-            <LinkItem href="" target = "_blank">
+          {/* <NavItem>
+            <LinkItem href="/" target = "_blank">
               <FontAwesomeIcon icon={faHouse} size="2x"/>
               <div className = "circle"></div>
               <span></span>
             </LinkItem>
-          </NavItem>
+          </NavItem> */}
           
           <NavItem>
-            <LinkItem href="" target = "_blank">
+            <LinkItem href="https://www.linkedin.com/in/sing-kai/" target = "_blank">
               <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
               <div className = "circle"></div>
               <span></span>
@@ -27,7 +27,7 @@ const Nav = () =>{
           </NavItem>
           
           <NavItem>
-            <LinkItem href="" target = "_blank">
+            <LinkItem href="https://github.com/Sing-Kai" target = "_blank">
               <FontAwesomeIcon icon={faGithub} size="2x"/>  
               <div className = "circle"></div>
               <span></span>

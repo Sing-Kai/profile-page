@@ -22,11 +22,14 @@ export default function App({ Component, pageProps }: AppProps) {
         <Nav/>
         <ProfileTextCard>
           <ProfilePicContainer>
-              <Image src={profile} alt="Picture of the author" width={250} height={250} ></Image>
+              <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
           </ProfilePicContainer>
           <TextContainer>
-            <IntroText>Sing-Kai</IntroText>
-            <IntroDesc>Passionate mid-level software engineer who is self-discipline and capable of work with minimum amount of supervision. Collaborative team player who thrives on creating modern and engaging tech solutions.</IntroDesc>
+            <IntroText>Hi! I'm Sing-Kai</IntroText>
+            <IntroDesc>
+              Welcome to my profile page! I'm a software engineer with 6 years of working experience in range of different companies and industries. 
+              I enjoy working in collaborative teams that's passionate about creating software solutions with the modern technology.
+            </IntroDesc>
           </TextContainer>
         </ProfileTextCard>
       </Header> 
@@ -56,6 +59,7 @@ const ProfileTextCard = styled.div`
   margin-top: 10%;
 `
 const ProfilePicContainer = styled.div`
+  border-radius: 50%;
   padding: 5px;
   margin: 5px;
 `
@@ -63,7 +67,7 @@ const ProfilePicContainer = styled.div`
 const TextContainer = styled.div`
   padding: 5px;
   margin: 5px;
-  width: 50%;
+  width: 45%;
 `
 
 const IntroText = styled.span`
@@ -72,8 +76,7 @@ const IntroText = styled.span`
   display: block;
   font-size: 50px;
   font-weight: 800;
-  letter-spacing: 15px;
-/* font-family: 'Dala Floda Roman No 2'; */
+  letter-spacing: 10px;
 `
 const IntroDesc = styled.span`
   color: white;
