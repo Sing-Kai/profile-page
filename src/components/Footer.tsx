@@ -12,7 +12,6 @@ const Footer = () => {
 }
 
 const FooterContainer = styled.div`
-  /* background: ${props => props.theme.colors.neutral}; */
   display: flex;
   position: relative;
   bottom: 0;
@@ -23,11 +22,7 @@ const FooterContainer = styled.div`
 `;
 
 const FooterItem = styled.div`
-  /* background: ${props => props.theme.colors.neutral}; */
-  /* background: black; */
-  /* padding: 10px; */
-  /* text-align: center;
-  vertical-align: middle; */
+  font-size: 12px
 `;
 
 export default Footer;
