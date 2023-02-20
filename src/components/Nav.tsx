@@ -3,7 +3,7 @@ import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faHouse} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
-import { useRouter } from 'next/router'
+import Link  from 'next/link'
 
 const Nav = () =>{
   return (
@@ -12,35 +12,43 @@ const Nav = () =>{
         <NavContainer className="nav">
 
           {/* <NavItem>
-            <LinkItem href="/home" target = "_blank">
-              <FontAwesomeIcon icon={faHouse} size="2x"/>
-              <div className = "circle"></div>
-              <span></span>
-            </LinkItem>
+            <Link href="/">    
+              <LinkItem>
+                <FontAwesomeIcon icon={faHouse} size="2x"/>  
+                <div className = "circle"></div>
+                <span></span>
+              </LinkItem>
+            </Link>
           </NavItem> */}
           
           <NavItem>
-            <LinkItem href="https://www.linkedin.com/in/sing-kai/" target = "_blank">
-              <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
-              <div className = "circle"></div>
-              <span></span>
-            </LinkItem>
+            <Link href="https://www.linkedin.com/in/sing-kai/" target = "_blank">    
+              <LinkItem>
+                <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
+                <div className = "circle"></div>
+                <span></span>
+              </LinkItem>
+            </Link>
           </NavItem>
           
           <NavItem>
-            <LinkItem href="https://github.com/Sing-Kai" target = "_blank">
-              <FontAwesomeIcon icon={faGithub} size="2x"/>  
-              <div className = "circle"></div>
-              <span></span>
-            </LinkItem>
+            <Link href="https://github.com/Sing-Kai" target = "_blank">    
+              <LinkItem>
+                <FontAwesomeIcon icon={faGithub} size="2x"/>  
+                <div className = "circle"></div>
+                <span></span>
+              </LinkItem>
+            </Link>
           </NavItem>
 
           <NavItem>
-            <LinkItem href="/experience" target = "_blank">
-              <FontAwesomeIcon icon={faBriefcase} size="2x"/>  
-              <div className = "circle"></div>
-              <span></span>
-            </LinkItem>
+            <Link href="/experience">            
+              <LinkItem>
+                <FontAwesomeIcon icon={faBriefcase} size="2x"/>  
+                <div className = "circle"></div>
+                <span></span>
+              </LinkItem>
+            </Link>  
           </NavItem>
 
         </NavContainer>
@@ -84,8 +92,7 @@ const illuminate = keyframes`
     opacity: 0;
   }
 `
-
-const LinkItem = styled.a`
+const LinkItem = styled.div`
   float:left;
   width: 100px;
   text-align:center;
