@@ -73,12 +73,12 @@ const IntroText = styled.span`
   display: block;
   font-size: 40px;
   font-weight: 800;
-  letter-spacing: 10px;
+  letter-spacing: 8px;
 `
 const IntroDesc = styled.span`
   color: white;
   display: block;
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 400;
   letter-spacing: 3px;
 `
