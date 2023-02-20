@@ -1,8 +1,9 @@
 import React from 'react'
 import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHouse} from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase, faHouse} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
+import { useRouter } from 'next/router'
 
 const Nav = () =>{
   return (
@@ -11,7 +12,7 @@ const Nav = () =>{
         <NavContainer className="nav">
 
           {/* <NavItem>
-            <LinkItem href="/" target = "_blank">
+            <LinkItem href="/home" target = "_blank">
               <FontAwesomeIcon icon={faHouse} size="2x"/>
               <div className = "circle"></div>
               <span></span>
@@ -29,6 +30,14 @@ const Nav = () =>{
           <NavItem>
             <LinkItem href="https://github.com/Sing-Kai" target = "_blank">
               <FontAwesomeIcon icon={faGithub} size="2x"/>  
+              <div className = "circle"></div>
+              <span></span>
+            </LinkItem>
+          </NavItem>
+
+          <NavItem>
+            <LinkItem href="/experience" target = "_blank">
+              <FontAwesomeIcon icon={faBriefcase} size="2x"/>  
               <div className = "circle"></div>
               <span></span>
             </LinkItem>
