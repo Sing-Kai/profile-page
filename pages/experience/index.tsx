@@ -1,56 +1,43 @@
 import styled from 'styled-components'
 import Nav from "../../src/components/Nav"
 import Pages from '../../src/enums/pages'
+import IExperience, {experienceData} from '../../src/data/experience-data'
+
 const Experience = () => {
   return (
     <>
       <Header>
         <Nav page={Pages.Experience}/> 
         <ExperienceContainer>
-          <ExperienceCard>
-            <TitleContainer>
-              <ExperienceTitle>Example Company </ExperienceTitle>
-              <ExperienceDate>Aug 21 - Dec 22</ExperienceDate>
-            </TitleContainer>
-            <ExperienceItemList>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-            </ExperienceItemList>
-          </ExperienceCard>
-
-          <Line/>
-
-          <ExperienceCard>
-            <TitleContainer>
-              <ExperienceTitle>Example Company </ExperienceTitle>
-              <ExperienceDate>Aug 21 - Dec 22</ExperienceDate>
-            </TitleContainer>
-            <ExperienceItemList>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-            </ExperienceItemList>
-          </ExperienceCard>
-          
-          <Line/>
-
-          <ExperienceCard>
-            <TitleContainer>
-              <ExperienceTitle>Example Company </ExperienceTitle>
-              <ExperienceDate>Aug 21 - Dec 22</ExperienceDate>
-            </TitleContainer>
-            <ExperienceItemList>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-              <ExperienceItem>add some tech skill</ExperienceItem>
-            </ExperienceItemList>
-          </ExperienceCard>
-
+          {
+            experienceData.map((experience) => { 
+              return <ExperienceCardContainer key={experience.id} {...experience}/>
+            })
+          }
         </ExperienceContainer>
       </Header>
     </>
   )
+}
+
+const ExperienceCardContainer = ({company, title, date, skills}: IExperience) =>{
+  return (<>
+      <ExperienceCard>
+      <TitleContainer>
+        <ExperienceTitle>{company} </ExperienceTitle>
+        <ExperienceDate>{date}</ExperienceDate>
+      </TitleContainer>
+      <ExperienceItemList>
+        {
+          skills.map((skill) => <ExperienceItem>{skill}</ExperienceItem>)
+        }
+      </ExperienceItemList>
+      </ExperienceCard>
+      <Line/>
+  </>
+
+  )
+
 }
 
 const Header = styled.div`
