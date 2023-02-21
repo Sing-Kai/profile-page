@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faHouse} from '@fortawesome/free-solid-svg-icons'
@@ -6,6 +6,11 @@ import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Link  from 'next/link'
 
 const Nav = () =>{
+
+  useEffect(() => {
+    console.log(document.URL)
+  }, [])
+
   return (
     <NavImageContainer>
       <div>

@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <FooterContainer>
         <FooterItem>
-          © {new Date().getFullYear()} - Sing-Kai Chiu
+          © {new Date().getFullYear()}
         </FooterItem>
     </FooterContainer>
   )
