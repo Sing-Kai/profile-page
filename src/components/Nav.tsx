@@ -1,8 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase, faHouse, IconDefinition} from '@fortawesome/free-solid-svg-icons'
-import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Link  from 'next/link'
 import INavData, {navigationData} from '../data/navigation-data'
 
@@ -51,18 +49,18 @@ const Nav = ({page}: INavDataItems) =>{
 }
 
 
-const Item = ({id, url, icon, target}: INavData) => {
+const Item = ({url, icon, target}: INavData) => {
 
   return (
-      <NavItem>
-        <Link href={url} target={target? "_blank": ""}>    
-          <LinkItem>
-            <FontAwesomeIcon icon={icon} size="2x"/>  
-            <div className = "circle"></div>
-            <span></span>
-          </LinkItem>
-        </Link>
-      </NavItem>
+    <NavItem>
+      <Link href={url} target={target? "_blank": ""}>    
+        <LinkItem>
+          <FontAwesomeIcon icon={icon} size="2x"/>  
+          <div className = "circle"></div>
+          <span></span>
+        </LinkItem>
+      </Link>
+    </NavItem>
   )
 }
 
