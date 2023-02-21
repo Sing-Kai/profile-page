@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 import Nav from "../../src/components/Nav"
+import Pages from '../../src/enums/pages'
 const Experience = () => {
   return (
     <>
       <Header>
-        <Nav page='experience'/> 
+        <Nav page={Pages.Experience}/> 
         <ExperienceContainer>
-
           <ExperienceCard>
             <TitleContainer>
               <ExperienceTitle>Example Company </ExperienceTitle>

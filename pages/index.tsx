@@ -5,7 +5,7 @@ import Footer from "../src/components/Footer"
 import profile from '../src/images/profile-pic.jpg';
 import Image from 'next/image'
 import BackImage from '../src/components/BackImage'
-import INavData, {navigationData} from '../src/data/navigation-data'
+import Pages from '../src/enums/pages'
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       </Head>
       <Header>
         <BackImage/>
-        <Nav page='home'/>
+        <Nav page={Pages.Home}/>
         <ProfileTextCard>
           <ProfilePicContainer>
               <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
