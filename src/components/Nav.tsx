@@ -1,9 +1,46 @@
 import React, {useEffect} from 'react'
 import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBriefcase, faHouse} from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase, faHouse, IconDefinition} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Link  from 'next/link'
+
+
+interface INavData {
+  id:string,
+  url:string,
+  icon: IconDefinition,
+  target:boolean,
+  // children?: React.ReactNode,
+}
+
+const navData: INavData[] = [
+  {
+    id: 'home',
+    url: '/',
+    icon: faHouse,
+    target: false,
+  },
+  {
+    id: 'experience',
+    url: '/experience',
+    icon: faBriefcase,
+    target: false,
+  },
+  {
+    id: 'linkedIn',
+    url: 'https://www.linkedin.com/in/sing-kai/',
+    icon: faLinkedin,
+    target: true,
+  },
+  {
+    id: 'gitHub',
+    url: 'https://github.com/Sing-Kai',
+    icon: faGithub,
+    target: true,
+  }
+]
+
 
 const Nav = () =>{
 
@@ -15,50 +52,30 @@ const Nav = () =>{
     <NavImageContainer>
       <div>
         <NavContainer className="nav">
-
-          {/* <NavItem>
-            <Link href="/">    
-              <LinkItem>
-                <FontAwesomeIcon icon={faHouse} size="2x"/>  
-                <div className = "circle"></div>
-                <span></span>
-              </LinkItem>
-            </Link>
-          </NavItem> */}
-          
-          <NavItem>
-            <Link href="https://www.linkedin.com/in/sing-kai/" target = "_blank">    
-              <LinkItem>
-                <FontAwesomeIcon icon={faLinkedin} size="2x"/>  
-                <div className = "circle"></div>
-                <span></span>
-              </LinkItem>
-            </Link>
-          </NavItem>
-          
-          <NavItem>
-            <Link href="https://github.com/Sing-Kai" target = "_blank">    
-              <LinkItem>
-                <FontAwesomeIcon icon={faGithub} size="2x"/>  
-                <div className = "circle"></div>
-                <span></span>
-              </LinkItem>
-            </Link>
-          </NavItem>
-
-          <NavItem>
-            <Link href="/experience">            
-              <LinkItem>
-                <FontAwesomeIcon icon={faBriefcase} size="2x"/>  
-                <div className = "circle"></div>
-                <span></span>
-              </LinkItem>
-            </Link>  
-          </NavItem>
-
+          {
+            navData.map((data,) => {
+              return <Item {...data}/>
+            })
+          }
         </NavContainer>
       </div>
     </NavImageContainer>
+  )
+}
+
+
+const Item = ({id, url, icon, target}: INavData) => {
+
+  return (
+      <NavItem>
+        <Link href={url} target={target? "_blank": ""}>    
+          <LinkItem>
+            <FontAwesomeIcon icon={icon} size="2x"/>  
+            <div className = "circle"></div>
+            <span></span>
+          </LinkItem>
+        </Link>
+      </NavItem>
   )
 }
 
