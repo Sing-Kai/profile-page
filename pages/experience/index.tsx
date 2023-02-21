@@ -4,7 +4,7 @@ const Experience = () => {
   return (
     <>
       <Header>
-        <Nav/> 
+        <Nav page='experience'/> 
         <ExperienceContainer>
 
           <ExperienceCard>

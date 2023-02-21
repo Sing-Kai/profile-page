@@ -1,51 +1,40 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 import styled, {keyframes} from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faHouse, IconDefinition} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 import Link  from 'next/link'
+import INavData, {navigationData} from '../data/navigation-data'
 
-
-interface INavData {
-  id:string,
-  url:string,
-  icon: IconDefinition,
-  target:boolean,
-  // children?: React.ReactNode,
+interface INavDataItems{
+  page: string
 }
 
-const navData: INavData[] = [
-  {
-    id: 'home',
-    url: '/',
-    icon: faHouse,
-    target: false,
-  },
-  {
-    id: 'experience',
-    url: '/experience',
-    icon: faBriefcase,
-    target: false,
-  },
-  {
-    id: 'linkedIn',
-    url: 'https://www.linkedin.com/in/sing-kai/',
-    icon: faLinkedin,
-    target: true,
-  },
-  {
-    id: 'gitHub',
-    url: 'https://github.com/Sing-Kai',
-    icon: faGithub,
-    target: true,
+const Nav = ({page}: INavDataItems) =>{
+
+  const [navData, setNavData] = useState<INavData[]>(navigationData)
+
+  const getNavigationItems = (path:string, items: INavData[]) =>  {
+
+    let testNavData:INavData[] = [];
+
+    if(path === '/'){
+      testNavData = navigationData.filter((d) => {
+        return d.id !== page
+      });
+    }
+
+    if(path === '/experience'){
+      testNavData = navigationData.filter((d) => {
+        return d.id !== page
+      });
+    }
+    return testNavData;
   }
-]
-
-
-const Nav = () =>{
 
   useEffect(() => {
-    console.log(document.URL)
+    const navItems = getNavigationItems(location.pathname, navigationData)
+    setNavData(navItems)
   }, [])
 
   return (
@@ -53,9 +42,7 @@ const Nav = () =>{
       <div>
         <NavContainer className="nav">
           {
-            navData.map((data,) => {
-              return <Item {...data}/>
-            })
+            navData.map((data) => <Item key={data.id} {...data}/>)
           }
         </NavContainer>
       </div>
