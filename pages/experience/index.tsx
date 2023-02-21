@@ -20,8 +20,9 @@ const Experience = () => {
   )
 }
 
-const ExperienceCardContainer = ({company, title, date, skills}: IExperience) =>{
-  return (<>
+const ExperienceCardContainer = ({company, title, date, skills, line}: IExperience) =>{
+  return (
+    <>
       <ExperienceCard>
       <TitleContainer>
         <ExperienceTitle>{company} </ExperienceTitle>
@@ -33,9 +34,8 @@ const ExperienceCardContainer = ({company, title, date, skills}: IExperience) =>
         }
       </ExperienceItemList>
       </ExperienceCard>
-      <Line/>
-  </>
-
+      {line && <Line/>}
+    </>
   )
 
 }

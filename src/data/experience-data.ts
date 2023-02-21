@@ -4,6 +4,7 @@ export default interface IExperience {
   title:string,
   date:string,
   skills: string[],
+  line: boolean,
 }
 
 export const experienceData: IExperience[] = [
@@ -13,6 +14,7 @@ export const experienceData: IExperience[] = [
     title:'Software Engineer',
     date:'Aug 21 - Dec 22',
     skills: ['add some description ', 'add some description ', 'add some description '],
+    line: true,
   },
   {
     id:'Sandvik',
@@ -20,6 +22,7 @@ export const experienceData: IExperience[] = [
     title:'Consultant Software Engineer',
     date:'May 19 - Aug 21',
     skills: ['add some description ', 'add some description ', 'add some description '],
+    line: true,
   },
   {
     id:'WDM',
@@ -27,5 +30,6 @@ export const experienceData: IExperience[] = [
     title:'Software Engineer',
     date:'Jan 17 - May 19',
     skills: ['add some description ', 'add some description ', 'add some description '],
+    line: false,
   }
 ]
