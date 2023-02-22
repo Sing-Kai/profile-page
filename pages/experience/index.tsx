@@ -7,7 +7,6 @@ const Experience = () => {
   return (
     <>
       <Header>
-        <Nav page={Pages.Experience}/> 
         <ExperienceContainer>
           {
             experienceData.map((experience) => { 
@@ -15,6 +14,7 @@ const Experience = () => {
             })
           }
         </ExperienceContainer>
+        <Nav page={Pages.Experience}/> 
       </Header>
     </>
   )
@@ -50,6 +50,8 @@ const Header = styled.div`
   position: relative;
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
   max-width: 100vw;
+  display: flex;
+  flex-direction: row;
 `
 const Line = styled.div`
   border-bottom: 3px solid rgba(255,255,255,1.0);

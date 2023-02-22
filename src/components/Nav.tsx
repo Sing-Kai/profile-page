@@ -31,8 +31,8 @@ const Nav = ({page}: INavDataItems) =>{
   }
 
   useEffect(() => {
-    const navItems = getNavigationItems(location.pathname, navigationData)
-    setNavData(navItems)
+    // const navItems = getNavigationItems(location.pathname, navigationData)
+    // setNavData(navItems)
   }, [])
 
   return (
@@ -66,7 +66,7 @@ const Item = ({url, icon, target}: INavData) => {
 
 const NavImageContainer = styled.div`
   display: flex;
-  align-items: center;
+  align-items: right;
   justify-content: right;
 `
 

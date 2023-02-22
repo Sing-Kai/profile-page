@@ -17,7 +17,6 @@ export default function Home() {
       </Head>
       <Header>
         <BackImage/>
-        <Nav page={Pages.Home}/>
         <ProfileTextCard>
           <ProfilePicContainer>
               <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
@@ -30,6 +29,7 @@ export default function Home() {
             </IntroDesc>
           </TextContainer>
         </ProfileTextCard>
+        <Nav page={Pages.Home}/>
       </Header> 
       <Footer/>
     </>
@@ -46,6 +46,8 @@ const Header = styled.div`
   position: relative;
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
   max-width: 100vw;
+  display: flex;
+  flex-direction: row;
 `
 
 const ProfileTextCard = styled.div`
@@ -54,7 +56,11 @@ const ProfileTextCard = styled.div`
   width: 500;
   padding: 5px;
   margin: 5px;
-  margin-top: 10%;
+  position: relative;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 `
 const ProfilePicContainer = styled.div`
   border-radius: 50%;
