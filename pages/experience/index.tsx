@@ -20,14 +20,16 @@ const Experience = () => {
   )
 }
 
-const ExperienceCardContainer = ({company, title, date, skills, line}: IExperience) =>{
+const ExperienceCardContainer = ({company, title, description, date, skills, line}: IExperience) =>{
   return (
     <>
       <ExperienceCard>
         <TitleContainer>
-          <ExperienceTitle>{company} </ExperienceTitle>
+          <ExperienceTitle>{company}</ExperienceTitle>
           <ExperienceDate>{date}</ExperienceDate>
         </TitleContainer>
+        <ExperienceText>{title}</ExperienceText>
+        <ExperienceDesc>{description}</ExperienceDesc>
         <ExperienceItemList>
           {
             skills.map((skill) => <ExperienceItem>{skill}</ExperienceItem>)
@@ -37,14 +39,13 @@ const ExperienceCardContainer = ({company, title, date, skills, line}: IExperien
       {line && <Line/>}
     </>
   )
-
 }
 
 const Header = styled.div`
   height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
-    rgba(126, 213, 111, 0.6), 
+    rgba(126, 213, 111, 0.8), 
     rgba(40, 180, 131, 1.0));
   background-size:cover;
   position: relative;
@@ -57,8 +58,9 @@ const Line = styled.div`
   border-bottom: 3px solid rgba(255,255,255,1.0);
 `
 const ExperienceContainer = styled.div`
+  color: white;
   margin: auto;
-  width: 45%;
+  width: 60%;
   height: auto;
   position: relative;
   justify-content: center;
@@ -75,36 +77,43 @@ const TitleContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  
 `
 
 const ExperienceTitle = styled.div`
-  color: white;
-  margin: 10px;
-  padding: 5px;
-  font-size: 20px;
+  margin: 5px;
+  font-size: 30px;
   font-weight: 800;
   letter-spacing: 8px;
 `
 
+const ExperienceText = styled.div`
+  margin: 5px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
+`
 const ExperienceDate = styled.div`
-  color: white;
-  margin: 10px;
-  padding: 5px;
-  font-size: 15px;
-  font-weight: 800;
-  letter-spacing: 8px;
+  margin: 5px;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 2px;
 `
 
 const ExperienceItemList = styled.ul`
     margin: 0;
 `
 
-const ExperienceItem = styled.li`
-  color: white;
-  padding: 5px;
-  font-size: 17px;
+const ExperienceDesc = styled.div`
+  margin: 5px;
+  font-size: 15px;
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
+`
+const ExperienceItem = styled.li`
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
 `
 
 export default Experience;
