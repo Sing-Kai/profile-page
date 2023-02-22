@@ -24,15 +24,15 @@ const ExperienceCardContainer = ({company, title, date, skills, line}: IExperien
   return (
     <>
       <ExperienceCard>
-      <TitleContainer>
-        <ExperienceTitle>{company} </ExperienceTitle>
-        <ExperienceDate>{date}</ExperienceDate>
-      </TitleContainer>
-      <ExperienceItemList>
-        {
-          skills.map((skill) => <ExperienceItem>{skill}</ExperienceItem>)
-        }
-      </ExperienceItemList>
+        <TitleContainer>
+          <ExperienceTitle>{company} </ExperienceTitle>
+          <ExperienceDate>{date}</ExperienceDate>
+        </TitleContainer>
+        <ExperienceItemList>
+          {
+            skills.map((skill) => <ExperienceItem>{skill}</ExperienceItem>)
+          }
+        </ExperienceItemList>
       </ExperienceCard>
       {line && <Line/>}
     </>
@@ -55,7 +55,6 @@ const Line = styled.div`
   border-bottom: 3px solid rgba(255,255,255,1.0);
 `
 const ExperienceContainer = styled.div`
-  /* padding-top: 15vh; */
   margin: auto;
   width: 45%;
   height: auto;
