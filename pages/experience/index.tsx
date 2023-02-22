@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Nav from "../../src/components/Nav"
+import Footer from "../../src/components/Footer"
 import Pages from '../../src/enums/pages'
 import IExperience, {experienceData} from '../../src/data/experience-data'
 
@@ -16,6 +17,7 @@ const Experience = () => {
         </ExperienceContainer>
         <Nav page={Pages.Experience}/> 
       </Header>
+      {/* <Footer/> */}
     </>
   )
 }
@@ -42,7 +44,6 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
 }
 
 const Header = styled.div`
-  height: 95vh;
   background-image: linear-gradient(
     to right bottom, 
     rgba(126, 213, 111, 0.8), 
@@ -53,16 +54,18 @@ const Header = styled.div`
   max-width: 100vw;
   display: flex;
   flex-direction: row;
+  height: 100vh;
 `
 const Line = styled.div`
   border-bottom: 3px solid rgba(255,255,255,1.0);
 `
 const ExperienceContainer = styled.div`
   color: white;
-  margin: auto;
+  margin: 50px auto;
+  padding-top: 5px;
   width: 60%;
   height: auto;
-  position: relative;
+  position: fix;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -79,14 +82,12 @@ const TitleContainer = styled.div`
   align-items: baseline;
   
 `
-
 const ExperienceTitle = styled.div`
   margin: 5px;
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 8px;
 `
-
 const ExperienceText = styled.div`
   margin: 5px;
   font-size: 17px;
@@ -111,7 +112,7 @@ const ExperienceDesc = styled.div`
   letter-spacing: 1px;
 `
 const ExperienceItem = styled.li`
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 400;
   letter-spacing: 1px;
 `
