@@ -11,30 +11,7 @@ interface INavDataItems{
 const Nav = ({page}: INavDataItems) =>{
 
   const [navData, setNavData] = useState<INavData[]>(navigationData)
-
-  const getNavigationItems = (path:string, items: INavData[]) =>  {
-
-    let testNavData:INavData[] = [];
-
-    if(path === '/'){
-      testNavData = navigationData.filter((d) => {
-        return d.id !== page
-      });
-    }
-
-    if(path === '/experience'){
-      testNavData = navigationData.filter((d) => {
-        return d.id !== page
-      });
-    }
-    return testNavData;
-  }
-
-  useEffect(() => {
-    // const navItems = getNavigationItems(location.pathname, navigationData)
-    // setNavData(navItems)
-  }, [])
-
+  
   return (
     <NavImageContainer>
       <div>
