@@ -54,14 +54,14 @@ const Header = styled.div`
   max-width: 100vw;
   display: flex;
   flex-direction: row;
-  height: 100vh;
+  height: auto;
 `
 const Line = styled.div`
   border-bottom: 3px solid rgba(255,255,255,1.0);
 `
 const ExperienceContainer = styled.div`
   color: white;
-  margin: 50px auto;
+  margin: 100px auto;
   padding-top: 5px;
   width: 60%;
   height: auto;
