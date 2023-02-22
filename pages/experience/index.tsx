@@ -63,7 +63,7 @@ const ExperienceContainer = styled.div`
   color: white;
   margin: 100px auto;
   padding-top: 5px;
-  width: 60%;
+  width: 50%;
   height: auto;
   position: fix;
   justify-content: center;
