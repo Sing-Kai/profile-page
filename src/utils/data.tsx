@@ -1,5 +1,3 @@
-import NavItem from "../components/NavItem"
-
 export const navLinks = [
     { name: "Home", 
      path: "/" 
