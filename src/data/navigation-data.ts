@@ -34,5 +34,3 @@ export const navigationData: INavData[] = [
     target: true,
   }
 ]
-
-// export default navigationData
