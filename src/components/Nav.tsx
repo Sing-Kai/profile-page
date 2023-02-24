@@ -15,7 +15,7 @@ const Nav = ({page}: INavDataItems) =>{
   return (
     <NavImageContainer>
       <div>
-        <NavContainer className="nav">
+        <NavContainer>
           {
             navData.map((data) => <Item key={data.id} {...data}/>)
           }

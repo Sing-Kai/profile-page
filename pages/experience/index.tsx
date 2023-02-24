@@ -34,7 +34,7 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
         <ExperienceDesc>{description}</ExperienceDesc>
         <ExperienceItemList>
           {
-            skills.map((skill) => <ExperienceItem>{skill}</ExperienceItem>)
+            skills.map((skill, i) => <ExperienceItem key={i}>{skill}</ExperienceItem>)
           }
         </ExperienceItemList>
       </ExperienceCard>
