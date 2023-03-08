@@ -16,13 +16,14 @@ const FooterContainer = styled.div`
   position: relative;
   bottom: 0;
   width: 100%;
-  height: 4vh;
+  height: 5vh;
   justify-content: center;
   align-items: center;
 `;
 
 const FooterItem = styled.div`
-  font-size: 12px
+  font-size: 12px;
+  color: white;
 `;
 
 export default Footer;

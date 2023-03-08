@@ -45,6 +45,11 @@ const NavImageContainer = styled.div`
   display: flex;
   align-items: right;
   justify-content: right;
+  @media (max-width: 600px) {
+    /* align-content: flex-start; */
+    /* width: 100vw; */
+    /* flex-direction: column */
+  }
 `
 
 const NavContainer = styled.ul`
@@ -53,6 +58,12 @@ const NavContainer = styled.ul`
   margin: 10px 10px auto auto;
   list-style-type: none;
   z-index: 1000;
+  @media (max-width: 600px) {
+    order: -1
+    /* align-content: flex-start; */
+    /* width: 100vw; */
+    /* flex-direction: column */
+  }
 `
 
 const NavItem = styled.li`
@@ -62,6 +73,9 @@ const NavItem = styled.li`
   height: 30px;
   text-decoration:none;
   z-index: 1;
+  @media (max-width: 600px) {
+    padding: 10px;
+  }
 `
 const illuminate = keyframes`
   0% {
