@@ -1,12 +1,12 @@
 import styled from 'styled-components'
-import Nav from "../../src/components/Nav"
-import Footer from "../../src/components/Footer"
-import Pages from '../../src/enums/pages'
 import IExperience, {experienceData} from '../../src/data/experience-data'
+import {PageContainer} from '../../src/components/page/page'
+import Navbar from "../../src/components/navbar/Navbar"
 
 const Experience = () => {
   return (
-    <>
+    <PageContainer>
+      <Navbar/>
       <Header>
         <ExperienceContainer>
           {
@@ -15,10 +15,8 @@ const Experience = () => {
             })
           }
         </ExperienceContainer>
-        <Nav page={Pages.Experience}/> 
       </Header>
-      {/* <Footer/> */}
-    </>
+    </PageContainer>
   )
 }
 
@@ -28,7 +26,7 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
       <ExperienceCard>
         <TitleContainer>
           <ExperienceTitle>{company}</ExperienceTitle>
-          <ExperienceDate>{date}</ExperienceDate>
+          <ExperienceText>{date}</ExperienceText>
         </TitleContainer>
         <ExperienceText>{title}</ExperienceText>
         <ExperienceDesc>{description}</ExperienceDesc>
@@ -44,10 +42,6 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
 }
 
 const Header = styled.div`
-  background-image: linear-gradient(
-    to right bottom, 
-    rgba(126, 213, 111, 0.8), 
-    rgba(40, 180, 131, 1.0));
   background-size:cover;
   position: relative;
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
@@ -61,40 +55,36 @@ const Line = styled.div`
 `
 const ExperienceContainer = styled.div`
   color: white;
-  margin: 100px auto;
-  padding-top: 5px;
-  width: 50%;
+  margin: auto;
+  padding-top: 2px;
+  width: 60%;
   height: auto;
   position: fix;
-  justify-content: center;
   display: flex;
   flex-direction: column;
+  @media (max-width: 850px) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+  }
 `
 const ExperienceCard = styled.div`
-  margin: 10px;
-  padding: 10px;
+  margin: 5px;
+  padding: 5px;
 `
-
 const TitleContainer = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
-  
 `
 const ExperienceTitle = styled.div`
   margin: 5px;
-  font-size: 30px;
-  font-weight: 800;
-  letter-spacing: 8px;
-`
-const ExperienceText = styled.div`
-  margin: 5px;
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 800;
   letter-spacing: 2px;
 `
-const ExperienceDate = styled.div`
+const ExperienceText = styled.div`
   margin: 5px;
   font-size: 17px;
   font-weight: 700;

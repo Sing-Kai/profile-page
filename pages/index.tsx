@@ -5,7 +5,6 @@ import Footer from "../src/components/Footer"
 import profile from '../src/images/profile-pic.jpg';
 import Image from 'next/image'
 import BackImage from '../src/components/BackImage'
-import Pages from '../src/enums/pages'
 
 export default function Home() {
   return (
