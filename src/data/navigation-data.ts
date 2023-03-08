@@ -6,6 +6,7 @@ export default interface INavData {
   url:string,
   icon: IconDefinition,
   target:boolean,
+  desc: string,
 }
 
 export const navigationData: INavData[] = [
@@ -14,23 +15,27 @@ export const navigationData: INavData[] = [
     url: '/',
     icon: faHouse,
     target: false,
+    desc: 'Home',
   },
   {
     id: 'experience',
     url: '/experience',
     icon: faBriefcase,
     target: false,
+    desc: 'Experience',
   },
   {
     id: 'linkedIn',
     url: 'https://www.linkedin.com/in/sing-kai/',
     icon: faLinkedin,
     target: true,
+    desc: 'LinkedIn',
   },
   {
     id: 'gitHub',
     url: 'https://github.com/Sing-Kai',
     icon: faGithub,
     target: true,
+    desc: 'GitHub',
   }
 ]

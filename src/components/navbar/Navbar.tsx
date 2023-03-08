@@ -20,14 +20,14 @@ const Navbar =  () => {
   )
 }
 
-const Item = ({url, icon, target}: INavData) => {
+const Item = ({url, icon, target, desc}: INavData) => {
 
   return (
     <NavItem>
       <Link href={url} target={target? "_blank": ""}>    
         <LinkItem>
           <FontAwesomeIcon icon={icon} size="1x"/>  
-          <NavText>Testing </NavText>
+          <NavText>{desc}</NavText>
         </LinkItem>
       </Link>
     </NavItem>
@@ -76,7 +76,7 @@ const NavItem = styled.li`
 `
 
 const LinkItem = styled.div`
-  width: 100px;
+  width: auto;
   text-align:center;
   color: #edf5e1;
   color: white;
