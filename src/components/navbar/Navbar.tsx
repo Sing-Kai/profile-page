@@ -41,6 +41,11 @@ const NavbarContainer = styled.div`
   width: 60%;
   margin-left: auto;
   margin-right: auto; 
+  @media (max-width: 850px) {
+    width: 80vw;
+    margin-left: 5%;
+    margin-right: 5%
+  }
 `
 
 const NavContainer = styled.ul`
@@ -51,9 +56,13 @@ const NavContainer = styled.ul`
   align-items: center;
   justify-content:  space-between;
   margin: 0;
-  padding: 0%;
-  @media (max-width: 600px) {
-
+  padding: 0;
+  @media (max-width: 850px) {
+    flex-direction: row;
+    align-items: center;
+    justify-content:  flex-start;
+    margin: 0;
+    padding: 0;
   }
 `
 
@@ -61,7 +70,7 @@ const NavItem = styled.li`
   padding: 15px;
   text-decoration:none;
   z-index: 1;
-  @media (max-width: 600px) {
+  @media (max-width: 850px) {
 
   }
 `

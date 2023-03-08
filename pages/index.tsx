@@ -57,6 +57,12 @@ const LandingBody = styled.div`
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
   display: flex;
   flex-direction: row;
+  @media (max-width: 850px) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto; 
+    /* padding: 50px; */
+  }
 `
 
 const ProfileTextCard = styled.div`
@@ -67,7 +73,7 @@ const ProfileTextCard = styled.div`
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  @media (max-width: 600px) {
+  @media (max-width: 850px) {
     display: flex;
     flex-direction: column;
     height: auto;
@@ -81,8 +87,7 @@ const ProfilePicContainer = styled.div`
   border-radius: 50%;
   padding: 5px;
   margin: 5px;
-  @media (max-width: 600px) {
-    order: 3;
+  @media (max-width: 850px) {
     height: 0;
     width: 0;
     visibility: hidden
@@ -93,12 +98,10 @@ const TextContainer = styled.div`
   padding: 5px;
   margin: 5px;
   width: 100%;
-  @media (max-width: 600px) {
+  @media (max-width: 850px) {
     order: 2;
     height: auto;
-    width: 90vw;
-    padding: 0, 50;
-    margin: 0, 50;
+    width: 100vw;
   }
 `
 
@@ -109,10 +112,12 @@ const IntroText = styled.span`
   font-size: 40px;
   font-weight: 800;
   letter-spacing: 8px;
-  @media (max-width: 600px) {
+  @media (max-width: 850px) {
     font-size: 30px;
     height: auto;
-    width: 90vw;
+    width: 80vw;
+    margin-left: 10%;
+    margin-right: 10%
   }
 `
 const IntroDesc = styled.span`
@@ -121,10 +126,12 @@ const IntroDesc = styled.span`
   font-size: 17px;
   font-weight: 400;
   letter-spacing: 3px;
-  @media (max-width: 600px) {
-    font-size: 17px;
+  @media (max-width: 850px) {
+    font-size: 15px;
     height: auto;
-    width: 90vw;
+    width: 80vw;
+    margin-left: 10%;
+    margin-right: 10%
   }
 `
 
