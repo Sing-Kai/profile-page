@@ -19,7 +19,7 @@ export default function Home() {
       <LandingBody>
         <ProfileTextCard>
           <ProfilePicContainer>
-              <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
+            <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
           </ProfilePicContainer>
           <TextContainer>
             <IntroText>Hi! I'm Sing-Kai</IntroText>
@@ -60,7 +60,6 @@ const LandingBody = styled.div`
     width: 90%;
     margin-left: auto;
     margin-right: auto; 
-    /* padding: 50px; */
   }
 `
 
@@ -108,7 +107,7 @@ const IntroText = styled.span`
   text-transform: uppercase;
   color: white;
   display: block;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 800;
   letter-spacing: 8px;
   @media (max-width: 850px) {
@@ -122,11 +121,11 @@ const IntroText = styled.span`
 const IntroDesc = styled.span`
   color: white;
   display: block;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 400;
   letter-spacing: 3px;
   @media (max-width: 850px) {
-    font-size: 15px;
+    font-size: 12px;
     height: auto;
     width: 80vw;
     margin-left: 10%;

@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from 'react'
-import styled, {keyframes} from 'styled-components'
+import React, {useState} from 'react'
+import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import Link  from 'next/link'
 import INavData, {navigationData} from '../../data/navigation-data'
@@ -38,7 +38,7 @@ const NavbarContainer = styled.div`
   height: 5vh;
   width: 100vw;
   z-index: 1000;
-  width: 60%;
+  width: 72%;
   margin-left: auto;
   margin-right: auto; 
   @media (max-width: 850px) {
@@ -67,11 +67,11 @@ const NavContainer = styled.ul`
 `
 
 const NavItem = styled.li`
-  padding: 15px;
+  padding: 10px;
   text-decoration:none;
   z-index: 1;
   @media (max-width: 850px) {
-
+    padding: 5px;
   }
 `
 
@@ -84,6 +84,11 @@ const LinkItem = styled.div`
 `
 
 const NavText = styled.span`
-  padding: 0.5rem;
+  padding: 15px;
+  font-size: 12px;
+  @media (max-width: 850px) {
+    padding: 5px;
+    font-size: 10px;
+  }
 `
 export default Navbar;
