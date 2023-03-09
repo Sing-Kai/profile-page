@@ -1,4 +1,4 @@
-import { faBriefcase, faHouse, IconDefinition} from '@fortawesome/free-solid-svg-icons'
+import { faBriefcase, faHouse, faMicrochip, IconDefinition} from '@fortawesome/free-solid-svg-icons'
 import {faLinkedin, faGithub} from '@fortawesome/free-brands-svg-icons'
 
 export default interface INavData {
@@ -23,6 +23,13 @@ export const navigationData: INavData[] = [
     icon: faBriefcase,
     target: false,
     desc: 'Experience',
+  },
+  {
+    id: 'projects',
+    url: '/projects',
+    icon: faMicrochip,
+    target: false,
+    desc: 'Projects',
   },
   {
     id: 'linkedIn',

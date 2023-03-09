@@ -9,7 +9,7 @@ export const PageContainer = styled.div`
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
   position: relative;
   height: auto;
-  min-height: 100vh
+  min-height: 100vh;
 `
 
 export const LandingBody = styled.div`

@@ -1,22 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 import Nav from '../src/components/Nav';
+import {PageContainer} from '../src/components/page/page'
+import Navbar from "../src/components/navbar/Navbar"
 
 const NotFoundPage = () => {
   return (
-  <>
-    <Header>
-      <div>
-        <ErrorContainer>
-          <ErrorMessage>404 Page Note Found</ErrorMessage>
-          <ErrorMessage>Ooops! The page you are looking for can't be found. Try clicking on the navigaiton items on the right</ErrorMessage>
-        </ErrorContainer>
-      </div>
-      <div>
-        <Nav page={''}/>
-      </div>
-    </Header>
-  </>
+    <PageContainer>
+      <Navbar/>
+      <ErrorContainer>
+            <ErrorMessage>404 Page Note Found</ErrorMessage>
+            <ErrorMessage>Ooops! The page you are looking for can't be found. Try clicking on the navigaiton items on the top of the page</ErrorMessage>
+          </ErrorContainer>
+    </PageContainer>
   );
 }
 
