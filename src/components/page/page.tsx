@@ -8,7 +8,7 @@ export const PageContainer = styled.div`
   background-size:cover;
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
   position: relative;
-  height: 100vh;
+  height: auto;
 `
 
 export const LandingBody = styled.div`
