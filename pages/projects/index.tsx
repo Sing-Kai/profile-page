@@ -2,12 +2,12 @@ import styled from 'styled-components'
 import {PageContainer} from '../../src/components/page/page'
 import Navbar from "../../src/components/navbar/Navbar"
 import IProject, { projectData } from '../../src/data/project-data'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import ProjectCard from '../../src/components/projects/ProjectCard'
 
 const Projects = () => {
 
-  const [projects, setProjects] = useState<IProject[]>(projectData)
+  const [projects] = useState<IProject[]>(projectData)
 
   const content = projects.map((data)=> <ProjectCard key={data.id} {...data}/>)
 
