@@ -11,11 +11,6 @@ const Projects = () => {
 
   const content = projects.map((data)=> <ProjectCard key={data.id} {...data}/>)
 
-  useEffect(()=>{
-    
-  })
-
-
   return (
     <PageContainer>
       <Navbar/>
