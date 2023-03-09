@@ -39,22 +39,4 @@ export const experienceData: IExperience[] = [
     skills: ['.Net Framework, .Net Core, C#, JavaScript', 'HTML5, CSS, Bootstrap, JQuery', 'Entity Framework, SQL Server', 'Git, GitLab', 'NUnit - XUnit'],
     line: false,
   },
-  {
-    id:'WDM',
-    company:'WDM',
-    title:'Software Engineer',
-    description: 'Developed multiple full stack applicaitons for the civil engineering company',
-    date:'Jan 17 - May 19',
-    skills: ['.Net Framework, .Net Core, C#, JavaScript', 'HTML5, CSS, Bootstrap, JQuery', 'Entity Framework, SQL Server', 'Git, GitLab', 'NUnit - XUnit'],
-    line: false,
-  },
-  {
-    id:'WDM',
-    company:'WDM',
-    title:'Software Engineer',
-    description: 'Developed multiple full stack applicaitons for the civil engineering company',
-    date:'Jan 17 - May 19',
-    skills: ['.Net Framework, .Net Core, C#, JavaScript', 'HTML5, CSS, Bootstrap, JQuery', 'Entity Framework, SQL Server', 'Git, GitLab', 'NUnit - XUnit'],
-    line: false,
-  }
 ]
