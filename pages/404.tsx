@@ -9,27 +9,12 @@ const NotFoundPage = () => {
     <PageContainer>
       <Navbar/>
       <ErrorContainer>
-            <ErrorMessage>404 Page Note Found</ErrorMessage>
-            <ErrorMessage>Ooops! The page you are looking for can't be found. Try clicking on the navigaiton items on the top of the page</ErrorMessage>
-          </ErrorContainer>
+        <ErrorMessage>404 Page Note Found</ErrorMessage>
+          <ErrorMessage>Ooops! The page you are looking for can't be found. Try clicking on the navigaiton items on the top of the page</ErrorMessage>
+        </ErrorContainer>
     </PageContainer>
   );
 }
-
-const Header = styled.div`
-  height: 95vh;
-  background-image: linear-gradient(
-    to right bottom, 
-    rgba(126, 213, 111, 0.8), 
-    rgba(40, 180, 131, 1.0));
-  background-size:cover;
-  position: relative;
-  clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
-  max-width: 100vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: right;
-`
 
 const ErrorContainer = styled.div`
   display: flex;
@@ -46,8 +31,6 @@ const ErrorMessage = styled.div`
   font-size: 20px;
   text-align: center;
   position: relative;
-  /* height: auto; */
-    /* margin: auto; */
 `
 
 export default NotFoundPage
