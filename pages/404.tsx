@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import Nav from '../src/components/Nav';
 import {PageContainer} from '../src/components/page/page'
 import Navbar from "../src/components/navbar/Navbar"
 
