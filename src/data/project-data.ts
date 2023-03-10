@@ -1,4 +1,5 @@
 import profile from '../images/code.jpg';
+import ron from '../images/ron.png';
 import { StaticImageData } from "next/image";
 
 export default interface IProject {
@@ -13,9 +14,9 @@ export default interface IProject {
 export const projectData: IProject[] = [
   {
     id:'WIP1',
-    img: profile,
-    title:'project title',
-    description: 'Work In Progress',
+    img: ron,
+    title:'Ron Swanson Quotes',
+    description: 'Generates quotes from Ron Swanson in Parks and Recreation. Made with React Hooks. ',
     url: 'https://github.com/Sing-Kai',
   },
   {
