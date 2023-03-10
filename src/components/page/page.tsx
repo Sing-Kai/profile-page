@@ -8,7 +8,8 @@ export const PageContainer = styled.div`
   background-size:cover;
   clip-path:polygon(0 0, 100% 0, 100% 100%, 0 100% );
   position: relative;
-  height: 100vh;
+  height: auto;
+  min-height: 100vh;
 `
 
 export const LandingBody = styled.div`
@@ -25,7 +26,6 @@ export const LandingBody = styled.div`
     width: 90%;
     margin-left: auto;
     margin-right: auto; 
-    /* padding: 50px; */
   }
 `
 

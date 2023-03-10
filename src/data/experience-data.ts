@@ -38,5 +38,5 @@ export const experienceData: IExperience[] = [
     date:'Jan 17 - May 19',
     skills: ['.Net Framework, .Net Core, C#, JavaScript', 'HTML5, CSS, Bootstrap, JQuery', 'Entity Framework, SQL Server', 'Git, GitLab', 'NUnit - XUnit'],
     line: false,
-  }
+  },
 ]

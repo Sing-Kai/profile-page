@@ -51,7 +51,7 @@ const Header = styled.div`
   height: auto;
 `
 const Line = styled.div`
-  border-bottom: 3px solid rgba(255,255,255,1.0);
+  border-bottom: 2px solid rgba(255,255,255,1.0);
 `
 const ExperienceContainer = styled.div`
   color: white;
@@ -81,12 +81,12 @@ const TitleContainer = styled.div`
 const ExperienceTitle = styled.div`
   margin: 5px;
   font-size: 17px;
-  font-weight: 800;
+  font-weight: Bold;
   letter-spacing: 2px;
 `
 const ExperienceText = styled.div`
   margin: 5px;
-  font-size: 17px;
+  font-size: 15px;
   font-weight: 700;
   letter-spacing: 2px;
 `
@@ -97,12 +97,12 @@ const ExperienceItemList = styled.ul`
 
 const ExperienceDesc = styled.div`
   margin: 5px;
-  font-size: 15px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
 `
 const ExperienceItem = styled.li`
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 400;
   letter-spacing: 1px;
 `
