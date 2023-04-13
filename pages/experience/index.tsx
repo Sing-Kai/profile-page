@@ -53,6 +53,7 @@ const Header = styled.div`
 const Line = styled.div`
   border-bottom: 2px solid rgba(255,255,255,1.0);
 `
+
 const ExperienceContainer = styled.div`
   margin: auto;
   padding-top: 2px;
@@ -79,6 +80,7 @@ const TitleContainer = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  border-bottom: 2px solid black;
 `
 const ExperienceTitle = styled.div`
   margin: 5px 3px 0px 3px;
