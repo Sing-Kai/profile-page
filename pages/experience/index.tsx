@@ -54,10 +54,9 @@ const Line = styled.div`
   border-bottom: 2px solid rgba(255,255,255,1.0);
 `
 const ExperienceContainer = styled.div`
-  color: white;
   margin: auto;
   padding-top: 2px;
-  width: 60%;
+  min-width: 50%;
   height: auto;
   position: fix;
   display: flex;
@@ -69,8 +68,11 @@ const ExperienceContainer = styled.div`
   }
 `
 const ExperienceCard = styled.div`
-  margin: 5px;
-  padding: 5px;
+  background: whitesmoke;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 30px;
+  padding: 10px;
 `
 const TitleContainer = styled.div`
   display: flex;
@@ -92,7 +94,7 @@ const ExperienceText = styled.div`
 `
 
 const ExperienceItemList = styled.ul`
-    margin: 0;
+    margin: 10px;
 `
 
 const ExperienceDesc = styled.div`

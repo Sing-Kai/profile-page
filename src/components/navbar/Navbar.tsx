@@ -60,8 +60,8 @@ const NavContainer = styled.ul`
   @media (max-width: 850px) {
     flex-direction: row;
     align-items: center;
-    justify-content:  flex-start;
-    margin: 0;
+    justify-content: space-between;
+    margin: 0 auto;
     padding: 0;
   }
 `
