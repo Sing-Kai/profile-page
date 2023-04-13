@@ -25,10 +25,10 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
     <>
       <ExperienceCard>
         <TitleContainer>
-          <ExperienceTitle>{company}</ExperienceTitle>
+          <ExperienceTitle>{title}</ExperienceTitle>
           <ExperienceText>{date}</ExperienceText>
         </TitleContainer>
-        <ExperienceText>{title}</ExperienceText>
+        <ExperienceText>{company}</ExperienceText>
         <ExperienceDesc>{description}</ExperienceDesc>
         <ExperienceItemList>
           {
@@ -72,7 +72,7 @@ const ExperienceCard = styled.div`
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 30px;
-  padding: 10px;
+  padding: 15px;
 `
 const TitleContainer = styled.div`
   display: flex;
@@ -81,14 +81,14 @@ const TitleContainer = styled.div`
   align-items: baseline;
 `
 const ExperienceTitle = styled.div`
-  margin: 5px;
-  font-size: 17px;
+  margin: 5px 3px 0px 3px;
+  font-size: 20px;
   font-weight: Bold;
   letter-spacing: 2px;
 `
 const ExperienceText = styled.div`
   margin: 5px;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 700;
   letter-spacing: 2px;
 `
@@ -99,9 +99,9 @@ const ExperienceItemList = styled.ul`
 
 const ExperienceDesc = styled.div`
   margin: 5px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: 400;
-  letter-spacing: 1px;
+  /* letter-spacing: 1px; */
 `
 const ExperienceItem = styled.li`
   font-size: 12px;
