@@ -73,7 +73,7 @@ const ExperienceCard = styled.div`
   border-radius: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   margin: 30px;
-  padding: 15px;
+  padding: 20px;
 `
 const TitleContainer = styled.div`
   display: flex;
