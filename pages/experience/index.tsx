@@ -1,24 +1,94 @@
 import styled from 'styled-components'
 import IExperience, {experienceData} from '../../src/data/experience-data'
+import timelineElements from '../../src/data/timeline-data'
+
 import {PageContainer} from '../../src/components/page/page'
 import Navbar from "../../src/components/navbar/Navbar"
 
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+
+import "react-vertical-timeline-component/style.min.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBriefcase, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
+
 const Experience = () => {
+
+  let iconStyle = { background: "#06D6A0", width: "50px", height: "50px", marginLeft: "-25px"};
+
+  const timeLimeElementConent = timelineElements.map((element) => {
+    let isWorkIcon = element.icon === "work";
+    return (
+      <VerticalTimelineElement
+        key={element.id}
+        date={element.date}
+        dateClassName="date"
+        iconStyle={iconStyle}
+        icon={isWorkIcon ? <FontAwesomeIcon icon={faBriefcase}/> : <FontAwesomeIcon icon={faGraduationCap}/>}
+      >
+        <h3 className="vertical-timeline-element-title">
+          {element.title}
+        </h3>
+        <h5 className="vertical-timeline-element-subtitle">
+          {element.location}
+        </h5>
+        <p id="description">{element.description}</p>
+
+        {
+          element.skills && (
+            <SkillsContainer>
+              <Skills skills={element.skills}/>
+            </SkillsContainer>
+          )
+        }
+      </VerticalTimelineElement>
+    );
+  })
+
   return (
     <PageContainer>
       <Navbar/>
       <Header>
-        <ExperienceContainer>
-          {
-            experienceData.map((experience) => { 
-              return <ExperienceCardContainer key={experience.id} {...experience}/>
-            })
-          }
-        </ExperienceContainer>
+        <VerticalTimeline>
+          {timeLimeElementConent}
+        </VerticalTimeline>
       </Header>
     </PageContainer>
   )
 }
+
+const Skills = ({skills}:any) => {
+  return (
+    skills.map((skill:string) => {
+      return (
+        <SkillText>
+          {skill}
+        </SkillText>  
+      )
+    })
+  )
+}
+
+
+
+// const Experience = () => {
+//   return (
+//     <PageContainer>
+//       <Navbar/>
+//       <Header>
+//         <ExperienceContainer>
+//           {
+//             experienceData.map((experience) => { 
+//               return <ExperienceCardContainer key={experience.id} {...experience}/>
+//             })
+//           }
+//         </ExperienceContainer>
+//       </Header>
+//     </PageContainer>
+//   )
+// }
 
 const ExperienceCardContainer = ({company, title, description, date, skills, line}: IExperience) =>{
   return (
@@ -36,10 +106,28 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
           }
         </ExperienceItemList>
       </ExperienceCard>
-      {line && <Line/>}
+      {/* {line && <Line/>} */}
     </>
   )
 }
+
+const SkillsContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    justify-content: flex-start
+`
+
+const SkillText = styled.div`
+  background: #dfdcdc;
+  font-size: 11px;
+  padding: 3px 5px;
+  max-width: 200px;
+  margin: 2px;
+  text-align: center;
+  border-radius: 10px
+`
 
 const Header = styled.div`
   background-size:cover;
@@ -55,13 +143,16 @@ const Line = styled.div`
 `
 
 const ExperienceContainer = styled.div`
-  margin: auto;
+  margin: 20px auto;
   padding-top: 2px;
   min-width: 50%;
   height: auto;
   position: fix;
   display: flex;
   flex-direction: column;
+  background: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-radius: 15px;
   @media (max-width: 850px) {
     width: 90%;
     margin-left: auto;
@@ -69,11 +160,11 @@ const ExperienceContainer = styled.div`
   }
 `
 const ExperienceCard = styled.div`
-  background: whitesmoke;
+  /* background: whitesmoke; */
   border-radius: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  margin: 30px;
-  padding: 20px;
+  /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+  margin: 10px 30px;
+  padding: 10px;
 `
 const TitleContainer = styled.div`
   display: flex;
