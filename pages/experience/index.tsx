@@ -16,7 +16,7 @@ import { faBriefcase, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 
 const Experience = () => {
 
-  let iconStyle = { background: "#06D6A0", width: "50px", height: "50px", marginLeft: "-25px"};
+  let iconStyle = { background: "#06D6A0"};
 
   const timeLimeElementConent = timelineElements.map((element) => {
     let isWorkIcon = element.icon === "work";
