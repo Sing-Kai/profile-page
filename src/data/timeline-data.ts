@@ -4,7 +4,7 @@ const timelineElements = [
     title: "Freelance Software Engineer",
     location: "Freelance - Remote",
     description: "Contract software engineers for hire! Passionate about technology and capably of developing FE and BE applications.",
-    date: "August 2021 - Present",
+    date: "May 2019 - Present",
     skills: ['React', 'NextJS', 'Node', 'Express', 'JavaScript', 'TypeScript', 
     'HTML5', 'CSS', 'Styled Components', 'Git', 'GitHub', 'GitHub Actions', 
     'GCP', 'CI/CD', 'Pair programming', 'Code Reviews','Docker', 'Jest', 'React Testing Library'],
