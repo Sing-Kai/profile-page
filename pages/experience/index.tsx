@@ -28,14 +28,13 @@ const Experience = () => {
         iconStyle={iconStyle}
         icon={isWorkIcon ? <FontAwesomeIcon icon={faBriefcase}/> : <FontAwesomeIcon icon={faGraduationCap}/>}
       >
-        <h3 className="vertical-timeline-element-title">
+        <h4 className="vertical-timeline-element-title">
           {element.title}
-        </h3>
+        </h4>
         <h5 className="vertical-timeline-element-subtitle">
           {element.location}
         </h5>
-        <p id="description">{element.description}</p>
-
+        <ExperienceDesc id="description">{element.description}</ExperienceDesc>
         {
           element.skills && (
             <SkillsContainer>
@@ -121,7 +120,7 @@ const SkillsContainer = styled.div`
 
 const SkillText = styled.div`
   background: #dfdcdc;
-  font-size: 11px;
+  font-size: 10px;
   padding: 3px 5px;
   max-width: 200px;
   margin: 2px;
@@ -191,8 +190,8 @@ const ExperienceItemList = styled.ul`
 `
 
 const ExperienceDesc = styled.div`
-  margin: 5px;
-  font-size: 13px;
+  margin: 5px 0px;
+  font-size: 12px;
   font-weight: 400;
   /* letter-spacing: 1px; */
 `
