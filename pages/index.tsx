@@ -25,7 +25,7 @@ export default function Home() {
             <IntroText>Hi! I'm Sing-Kai</IntroText>
             <IntroDesc>
               Welcome to my profile page! I'm a software engineer with 6 years of working experience in range of different companies and industries. 
-              I enjoy working in collaborative teams that's passionate about creating software solutions with the modern technology.
+              I enjoy working in collaborative teams that's passionate about creating software solutions with modern technology.
             </IntroDesc>
           </TextContainer>
         </ProfileTextCard>
