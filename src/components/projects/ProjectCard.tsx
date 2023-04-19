@@ -4,14 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import Link  from 'next/link'
 import IProject from '../../data/project-data'
+import { Skills, SkillsContainer } from '../skills/skills'
 
 
-const ProjectCard = ({img, title, description, url}: IProject) => {
+const ProjectCard = ({img, title, description, url, skills}: IProject) => {
 
   return (
     <ProjectContainer>
       <ProjectImage>
-        <Image src={img} alt="project alt" width={380} height={120}></Image>
+        <Image src={img} alt="project alt" width={380} height={150}></Image>
       </ProjectImage>
       <TitleContainer>
           <ProjectTitle>{title}</ProjectTitle>
@@ -24,6 +25,13 @@ const ProjectCard = ({img, title, description, url}: IProject) => {
         <div>
           <ProjectDesc>{description}</ProjectDesc>
         </div>
+        {
+          skills && (
+            <SkillsContainer>
+              <Skills skills={skills}/>
+            </SkillsContainer>
+          )
+        }
     </ProjectContainer>
   )
 }
@@ -34,7 +42,7 @@ const ProjectContainer = styled.div`
   width: auto;
   min-height: 240px;
   max-width: 390px;
-  padding: 5px;
+  padding: 8px;
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `

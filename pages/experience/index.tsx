@@ -14,6 +14,8 @@ import "react-vertical-timeline-component/style.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBriefcase, faGraduationCap} from '@fortawesome/free-solid-svg-icons'
 
+import { Skills, SkillsContainer } from '../../src/components/skills/skills'
+
 const Experience = () => {
 
   let iconStyle = { background: "#06D6A0"};
@@ -58,37 +60,6 @@ const Experience = () => {
   )
 }
 
-const Skills = ({skills}:any) => {
-  return (
-    skills.map((skill:string) => {
-      return (
-        <SkillText>
-          {skill}
-        </SkillText>  
-      )
-    })
-  )
-}
-
-
-
-// const Experience = () => {
-//   return (
-//     <PageContainer>
-//       <Navbar/>
-//       <Header>
-//         <ExperienceContainer>
-//           {
-//             experienceData.map((experience) => { 
-//               return <ExperienceCardContainer key={experience.id} {...experience}/>
-//             })
-//           }
-//         </ExperienceContainer>
-//       </Header>
-//     </PageContainer>
-//   )
-// }
-
 const ExperienceCardContainer = ({company, title, description, date, skills, line}: IExperience) =>{
   return (
     <>
@@ -110,23 +81,23 @@ const ExperienceCardContainer = ({company, title, description, date, skills, lin
   )
 }
 
-const SkillsContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin-top: 16px;
-    justify-content: flex-start
-`
+// const SkillsContainer = styled.div`
+//     display: flex;
+//     flex-direction: row;
+//     flex-wrap: wrap;
+//     margin-top: 16px;
+//     justify-content: flex-start
+// `
 
-const SkillText = styled.div`
-  background: #dfdcdc;
-  font-size: 10px;
-  padding: 3px 5px;
-  max-width: 200px;
-  margin: 2px;
-  text-align: center;
-  border-radius: 10px
-`
+// const SkillText = styled.div`
+//   background: #dfdcdc;
+//   font-size: 10px;
+//   padding: 3px 5px;
+//   max-width: 200px;
+//   margin: 2px;
+//   text-align: center;
+//   border-radius: 10px
+// `
 
 const Header = styled.div`
   background-size:cover;
