@@ -1,12 +1,14 @@
 import React, { ReactNode } from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 
-const Slide = ({ children }: { children: ReactNode }) => {
+const Slide = (props: any) => {
+
+  const {children, direction} = props
 
   const variants = {
     hidden: {
       opacity: 0,
-      x: 60,
+      x: direction === 'left' ? 60 : -60,
     },
     visible: {
       opacity: 1,

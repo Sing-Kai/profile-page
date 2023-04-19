@@ -19,22 +19,25 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Navbar/>
-      <Slide>
         <LandingBody>
           <ProfileTextCard>
-            <ProfilePicContainer>
-              <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
-            </ProfilePicContainer>
-            <TextContainer>
-              <IntroText>Hi! I'm Sing-Kai</IntroText>
-              <IntroDesc>
-                Welcome to my profile page! I'm a software engineer with 6 years of working experience in range of different companies and industries. 
-                I enjoy working in collaborative teams that's passionate about creating software solutions with modern technology.
-              </IntroDesc>
-            </TextContainer>
+            <Slide direction={'right'}>
+              <ProfilePicContainer>
+                <Image src={profile} alt="Picture of the author" width={225} height={225} ></Image>
+              </ProfilePicContainer>
+            </Slide>
+            <Slide direction={'left'}>
+              <TextContainer>
+                <IntroText>Hi! I'm Sing-Kai</IntroText>
+                <IntroDesc>
+                  Welcome to my profile page! I'm a software engineer with 6 years of working experience in range of different companies and industries. 
+                  I enjoy working in collaborative teams that's passionate about creating software solutions with modern technology.
+                </IntroDesc>
+              </TextContainer>
+            </Slide>
+
           </ProfileTextCard>
         </LandingBody> 
-      </Slide>
       <Footer/>
     </PageContainer>
   )

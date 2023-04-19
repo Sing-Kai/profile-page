@@ -15,7 +15,7 @@ const Projects = () => {
   return (
       <PageContainer>
         <Navbar/>
-        <Slide>
+        <Slide direction ={'left'}>
           <ProjectsContainer>
             {content}
           </ProjectsContainer>
