@@ -1,38 +1,41 @@
-import Image, {StaticImageData} from 'next/image'
+import Image from 'next/image'
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faGithub} from '@fortawesome/free-brands-svg-icons'
 import Link  from 'next/link'
 import IProject from '../../data/project-data'
 import { Skills, SkillsContainer } from '../skills/skills'
+import Hover from '../animation/Hover'
 
 
 const ProjectCard = ({img, title, description, url, skills}: IProject) => {
 
   return (
-    <ProjectContainer>
-      <ProjectImage>
-        <Image src={img} alt="project alt" width={380} height={150}></Image>
-      </ProjectImage>
-      <TitleContainer>
-          <ProjectTitle>{title}</ProjectTitle>
-          <LinkContainer>
-            <Link href={url} target={"_blank"}>
-              <FontAwesomeIcon icon={faGithub} size="1x"/>  
-            </Link>
-          </LinkContainer>
-        </TitleContainer>
-        <div>
-          <ProjectDesc>{description}</ProjectDesc>
-        </div>
-        {
-          skills && (
-            <SkillsContainer>
-              <Skills skills={skills}/>
-            </SkillsContainer>
-          )
-        }
-    </ProjectContainer>
+    <Hover>
+      <ProjectContainer>
+        <ProjectImage>
+          <Image src={img} alt="project alt" width={380} height={150}></Image>
+        </ProjectImage>
+        <TitleContainer>
+            <ProjectTitle>{title}</ProjectTitle>
+            <LinkContainer>
+              <Link href={url} target={"_blank"}>
+                <FontAwesomeIcon icon={faGithub} size="1x"/>  
+              </Link>
+            </LinkContainer>
+          </TitleContainer>
+          <div>
+            <ProjectDesc>{description}</ProjectDesc>
+          </div>
+          {
+            skills && (
+              <SkillsContainer>
+                <Skills skills={skills}/>
+              </SkillsContainer>
+            )
+          }
+      </ProjectContainer>
+    </Hover>
   )
 }
 

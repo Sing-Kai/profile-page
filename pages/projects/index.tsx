@@ -4,6 +4,7 @@ import Navbar from "../../src/components/navbar/Navbar"
 import IProject, { projectData } from '../../src/data/project-data'
 import { useState } from 'react'
 import ProjectCard from '../../src/components/projects/ProjectCard'
+import Slide from '../../src/components/animation/Slide'
 
 const Projects = () => {
 
@@ -12,12 +13,14 @@ const Projects = () => {
   const content = projects.map((data)=> <ProjectCard key={data.id} {...data}/>)
 
   return (
-    <PageContainer>
-      <Navbar/>
-      <ProjectsContainer>
-        {content}
-      </ProjectsContainer>
-    </PageContainer>
+      <PageContainer>
+        <Navbar/>
+        <Slide>
+          <ProjectsContainer>
+            {content}
+          </ProjectsContainer>
+        </Slide>
+      </PageContainer>
   )
 }
 

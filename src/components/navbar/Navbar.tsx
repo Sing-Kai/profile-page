@@ -70,6 +70,12 @@ const NavItem = styled.li`
   padding: 10px;
   text-decoration:none;
   z-index: 1;
+  &:hover  {
+    transition: 0.5s;
+    background-color: #3e8e41;
+    background-color:rgba(62, 142, 65, 0.5);
+    border-radius: 8px;
+  }
   @media (max-width: 850px) {
     padding: 5px;
   }
