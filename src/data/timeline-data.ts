@@ -5,7 +5,7 @@ const timelineElements = [
     location: "Remote",
     description: "Contract software engineers for hire! Passionate about technology and capably of developing FE and BE applications.",
     date: "May 2019 - Present",
-    skills: ['React', 'JavaScript', 'TypeScript', 'Node', 'Golang', 'C#', 'Agile', 'AWS', 'GCP'],
+    skills: ['React', 'JavaScript', 'TypeScript', 'Node', 'Golang', 'C#', 'Agile', 'AWS',],
     icon: "work",
   },
   {
@@ -27,6 +27,16 @@ const timelineElements = [
     date: "May 2019 - August 2021",
     skills: ['.Net Framework', 'C#', 'JavaScript', 'OOP', 'SOLID principles', 'Git', 'Azure DevOps', 'SQL Server', 'NUnit', 'XUnit'],
     icon: "work",
+  },
+  {
+    id: "Coursera",
+    title: "Study: Front-End Web Development with React",
+    location: "Coursera",
+    description: "Implemented single page applications in React and use various features including components and forms. Used redux to design the architecture for a React-Redux application",
+    date: "December 2020",
+    skills: ['React', 'JavaScript'],
+    icon: "study",
+    cert: 'https://coursera.org/share/9a1372c74c3a60038ab04ab0761dac04'
   },
   {
     id: "WDM",

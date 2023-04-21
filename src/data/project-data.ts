@@ -1,4 +1,4 @@
-import profile from '../images/code.jpg';
+import profile from '../images/profile-screen-shot.png';
 import ron from '../images/ron.png';
 import spock from '../images/spock.jpeg';
 import auction from '../images/auction.jpg'
@@ -15,15 +15,23 @@ export default interface IProject {
 
 export const projectData: IProject[] = [
   {
-    id:'WIP3',
+    id:'aws-auciton',
     img: auction,
     title:'AWS Auction Microservice',
     description: 'Auctioning backend using AWS Api Gateway, Lambda functions, EventBridge, SNS, SES and Serveless Framework',
     url: 'https://github.com/Sing-Kai/aws-auction-app-notes',
     skills: ['AWS', 'Serverless Framework', 'Microservice', 'JavaScript', 'Node.js'],
-  },  
+  }, 
   {
-    id:'WIP2',
+    id:'profile',
+    img: profile,
+    title:'Profile Page',
+    description: 'My profile page you are looking at now',
+    url: 'https://github.com/Sing-Kai/profile-page',
+    skills: ['React', 'TypeScript', 'Next', 'Styled Components', 'GitHubs Actions', 'Vercel'],
+  },   
+  {
+    id:'spock',
     img: spock,
     title:'Rock Paper Spock',
     description: 'Rock Paper Scissor but more complex, popularised by Big Bang theory',
@@ -31,7 +39,7 @@ export const projectData: IProject[] = [
     skills: ['React', 'TypeScript', 'Tailwind', 'Zustand'],
   },  
   {
-    id:'WIP1',
+    id:'ron',
     img: ron,
     title:'Ron Swanson Quotes',
     description: 'Generates quotes from Ron Swanson in Parks and Recreation. Made with React Hooks. ',
